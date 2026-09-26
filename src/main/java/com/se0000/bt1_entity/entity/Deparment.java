@@ -15,6 +15,9 @@ public class Deparment {
     @Column(name = "dept_name", length = 100, nullable = false)
     private String deptName;
 
+    @Column(name = "dept_title", length = 100, nullable = false)
+    private String deptTitle;
+
     @OneToMany(mappedBy = "deparment", cascade = CascadeType.ALL)
     private List<Employee> emp = new ArrayList<Employee>();
 
